@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: debito-app
+
+server:
+  address: 0.0.0.0
+  port: 8080
+
+aws:
+  sns:
+    purchase-cancellation-topic-arn: arn:aws:sns:us-east-1:000000000000:debit-cancel-topic
+
+cloud:
+  aws:
+    credentials:
+      access-key: ${AWS_ACCESS_KEY_ID}
+      secret-key: ${AWS_SECRET_ACCESS_KEY}
+    region:
+      static: ${AWS_REGION}
+    endpoint:
+      dynamodb: ${DYNAMODB}
+      sns: ${SNS}
