@@ -3,7 +3,7 @@
 
 <img width="480" height="240" alt="Image" src="https://github.com/user-attachments/assets/101632bd-3389-475d-8cf5-565e5407afdb" />
 
-Projeto com utilizando java 21, spring boot e infra estruturada via terraform utilizando localstack para simular serviços AWS
+Projeto utilizando java 21, spring boot e infra estruturada via terraform, utilizando localstack para simular serviços AWS
 
 
 ## Recursos
@@ -35,6 +35,8 @@ Projeto com utilizando java 21, spring boot e infra estruturada via terraform ut
 ```
 Onde amount é o montante do débito e reference um identificador fornecido pelo cliente da API
 
+<img width="1919" height="648" alt="Image" src="https://github.com/user-attachments/assets/2a21ce77-665f-4f4d-9fd6-e18230bf140f" />
+
 * Executar uma chamada PUT para cancelar o debito. Com o mesmo parâmtero reference utilizado na criação do debito, com o seguinte exemplo de JSON. Incluindo o id retornado na chamada post como parametro na url.
 ``` shell
 {
@@ -42,6 +44,11 @@ Onde amount é o montante do débito e reference um identificador fornecido pelo
 }
 ```
 
+<img width="1919" height="835" alt="Image" src="https://github.com/user-attachments/assets/a586599d-f71c-4630-8c66-1c1c925fea30" />
+
 * No site do [localstack](https://www.localstack.cloud/pricing) é possível verificar o informação inserida no dynamodb.
+
+<img width="1505" height="648" alt="Image" src="https://github.com/user-attachments/assets/f5e62879-fb08-4ac6-b1d1-6a98c31ea1f7" />
+
 
 
