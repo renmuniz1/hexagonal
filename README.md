@@ -18,3 +18,9 @@ Projeto com utilizando java 21, spring boot e infra estruturada via terraform ut
 * Ter Terraform instalado.
 * (Opcional) Criar uma [conta localstack](https://www.localstack.cloud/pricing) para visualizar os recursos aws utilizados. Utilizar o free tier
 
+## Como executar o projeto
+* Baixar o projeto do github e fazer checkout para branch master.
+* Dentro do projeto na pasta app, executar o comando **docker-compose up --build -d**. Com esse comando o docker vai baixar as imagens necessarias e fazer o build da aplicação e subir o projeto localmente.
+* Dentro do projeto na pasta infra executar o comando **terraform init** e depois o comando **terraform apply** para gerar a infra aws simulada pelo localstack.
+
+
