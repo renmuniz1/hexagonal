@@ -23,6 +23,25 @@ Projeto com utilizando java 21, spring boot e infra estruturada via terraform ut
 * Dentro do projeto na pasta app, executar o comando **docker-compose up --build -d**. Com esse comando o docker vai baixar as imagens necessarias e fazer o build da aplicação e subir o projeto localmente.
 <img width="488" height="104" alt="Image" src="https://github.com/user-attachments/assets/5c22971b-49aa-4841-87d1-1b93e03ccdb4" />
 
-* Dentro do projeto na pasta infra executar o comando **terraform init** e depois o comando **terraform apply** para gerar a infra aws simulada pelo localstack.
+* Dentro do projeto na pasta infra executar o comando **terraform init** e depois o comando **terraform apply** para gerar a infra aws simulada pelo localstack **(API GATEWAY, DYNAMODB, SNS)**. Ao final do comando uma mensagem output vai mostar a url para realizar a chamada do serviço.
+<img width="901" height="124" alt="Image" src="https://github.com/user-attachments/assets/caadd322-15ef-4737-9439-0a8ba3270dcd" />
+
+* Executar uma chamada POST para criar um debito com o seguinte exemplo de JSON
+``` shell
+{
+  "reference": "REF-CREATE",
+  "amount": 180.75
+}
+```
+Onde amount é o montante do débito e reference um identificador fornecido pelo cliente da API
+
+* Executar uma chamada PUT para cancelar o debito. Com o mesmo parâmtero reference utilizado na criação do debito, com o seguinte exemplo de JSON. Incluindo o id retornado na chamada post como parametro na url.
+``` shell
+{
+  "reference": "REF-CREATE"
+}
+```
+
+* No site do [localstack](https://www.localstack.cloud/pricing) é possível verificar o informação inserida no dynamodb.
 
 
